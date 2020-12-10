@@ -32,6 +32,11 @@ public class User {
         return new User(firstName, lastName, cityName, "+49", streetName, bloodType);
     }
 
+    public static User createWebUserWithDefaultValues(){
+        return new WebUser("aliano", "pass","Ali", "Wassouf", "Hamburg",
+                "+49", "Street", "java");
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -84,5 +89,17 @@ public class User {
     public User setBloodType(String bloodType) {
         this.bloodType = bloodType;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", cityName='" + cityName + '\'' +
+                ", countryCode='" + countryCode + '\'' +
+                ", streetName='" + streetName + '\'' +
+                ", bloodType='" + bloodType + '\'' +
+                '}';
     }
 }
